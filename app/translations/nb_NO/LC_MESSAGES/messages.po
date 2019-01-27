@@ -1,0 +1,249 @@
+# Norwegian Bokmål (Norway) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-01-27 15:03+0100\n"
+"PO-Revision-Date: 2019-01-27 15:03+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: nb_NO\n"
+"Language-Team: nb_NO <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr "Logg inn for å se denne siden."
+
+#: app/email.py:19
+msgid "[Microblog] Reset your password"
+msgstr "[Mikroblogg] Nullstill passord"
+
+#: app/forms.py:9 app/forms.py:16 app/forms.py:34
+msgid "Username"
+msgstr "Brukernavn"
+
+#: app/forms.py:10 app/forms.py:18 app/forms.py:61
+msgid "Password"
+msgstr "Passord"
+
+#: app/forms.py:11
+msgid "Remember me"
+msgstr "Husk meg"
+
+#: app/forms.py:12 app/routes.py:50 app/templates/login.html:5
+msgid "Sign in"
+msgstr "Logg inn"
+
+#: app/forms.py:17 app/forms.py:56
+msgid "Email"
+msgstr "Epost"
+
+#: app/forms.py:19 app/forms.py:62
+msgid "Repeat password"
+msgstr "Gjenta passord"
+
+#: app/forms.py:20 app/routes.py:71 app/templates/register.html:5
+msgid "Register"
+msgstr "Registrer"
+
+#: app/forms.py:25 app/forms.py:46
+msgid "Please use a different username."
+msgstr "Velg et annet brukernavn."
+
+#: app/forms.py:30
+msgid "Please use a different email address."
+msgstr "Velg en annen epostadresse."
+
+#: app/forms.py:35
+msgid "About me"
+msgstr "Om meg"
+
+#: app/forms.py:36 app/forms.py:52
+msgid "Submit"
+msgstr "Send inn"
+
+#: app/forms.py:50
+msgid "Say something"
+msgstr "Si noe"
+
+#: app/forms.py:57 app/forms.py:63
+msgid "Request password reset"
+msgstr "Nullstill passord"
+
+#: app/routes.py:21
+msgid "Your post is now live!"
+msgstr "Meldingen er postet!"
+
+#: app/routes.py:30 app/templates/base.html:27
+msgid "Home"
+msgstr "Hjem"
+
+#: app/routes.py:43
+msgid "Invalid username or password"
+msgstr "Ugyldig brukernavn eller passord"
+
+#: app/routes.py:69
+msgid "Congratulations, you are now a registered user!"
+msgstr "Gratulerer, du har nå en brukerkonto!"
+
+#: app/routes.py:104
+msgid "Your changes have been saved."
+msgstr "Dine endringer er lagret."
+
+#: app/routes.py:109
+msgid "Edit profile"
+msgstr "Endre profil"
+
+#: app/routes.py:117 app/routes.py:133
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Bruker %(username)s finnes ikke."
+
+#: app/routes.py:120
+msgid "You cannot follow yourself!"
+msgstr "Du kan ikke følge deg selv!"
+
+#: app/routes.py:124
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "Du følger %(username)s!"
+
+#: app/routes.py:136
+msgid "You cannot unfollow yourself!"
+msgstr "Du kan ikke avfølge deg selv!"
+
+#: app/routes.py:140
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "Du følger ikke %(username)s."
+
+#: app/routes.py:154 app/templates/base.html:28
+msgid "Explore"
+msgstr "Utforsk"
+
+#: app/routes.py:167
+msgid "Check your email for the instructions to reset your password."
+msgstr "Sjekk eposten din for instruksjoner for å nullstille passordet."
+
+#: app/routes.py:169 app/templates/reset_password_request.html:5
+msgid "Reset password"
+msgstr "Nullstill passord"
+
+#: app/routes.py:183
+msgid "Your password has been reset."
+msgstr "Passordet er nullstilt."
+
+#: app/templates/404.html:4
+msgid "File not found"
+msgstr "Fant ikke filen"
+
+#: app/templates/404.html:5 app/templates/500.html:6
+msgid "Back"
+msgstr "Tilbake"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Noe uventet skjedde"
+
+#: app/templates/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "Administratoren er varslet. Beklager bryderiet!"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s sa %(when)s"
+
+#: app/templates/base.html:10 app/templates/base.html:23
+msgid "Microblog"
+msgstr "Mikroblogg"
+
+#: app/templates/base.html:10
+msgid "Welcome to Microblog"
+msgstr "Velkommen til Mikroblogg"
+
+#: app/templates/base.html:18
+msgid "Toggle navigation"
+msgstr "Navigasjon"
+
+#: app/templates/base.html:32
+msgid "Login"
+msgstr "Logg inn"
+
+#: app/templates/base.html:34
+msgid "Profile"
+msgstr "Profil"
+
+#: app/templates/base.html:35
+msgid "Logout"
+msgstr "Logg ut"
+
+#: app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "Endre profil"
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hello %(username)s!"
+msgstr "Hallo %(username)s!"
+
+#: app/templates/index.html:20 app/templates/user.html:32
+msgid "Newer posts"
+msgstr "Nyere meldinger"
+
+#: app/templates/index.html:25 app/templates/user.html:37
+msgid "Older posts"
+msgstr "Eldre meldinger"
+
+#: app/templates/login.html:12
+msgid "New user?"
+msgstr "Ny bruker?"
+
+#: app/templates/login.html:12
+msgid "Click to register!"
+msgstr "Registrer bruker!"
+
+#: app/templates/login.html:13
+msgid "Forgot your password?"
+msgstr "Glemt passord?"
+
+#: app/templates/login.html:14
+msgid "Click to reset password"
+msgstr "Nullstill passord"
+
+#: app/templates/reset_password.html:5
+msgid "Reset your password"
+msgstr "Nullstill passord"
+
+#: app/templates/user.html:11
+msgid "Last seen on:"
+msgstr "Sist sett:"
+
+#: app/templates/user.html:13
+msgid "followers"
+msgstr "følgere"
+
+#: app/templates/user.html:13
+msgid "following"
+msgstr "følger"
+
+#: app/templates/user.html:15
+msgid "Edit your profile"
+msgstr "Endre profil"
+
+#: app/templates/user.html:17
+msgid "Follow"
+msgstr "Følg"
+
+#: app/templates/user.html:19
+msgid "Unfollow"
+msgstr "Avfølg"
+

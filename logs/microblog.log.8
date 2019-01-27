@@ -1,4 +1,4 @@
-2019-01-22 22:08:09,892 ERROR: Exception on /index [GET] [in /home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py:1761]
+2019-01-22 22:14:52,687 ERROR: Exception on /index [GET] [in /home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -87,3 +87,42 @@ Traceback (most recent call last):
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 59, in fail
     raise exc(msg, lineno, self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: expected name or number
+2019-01-22 22:17:06,576 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:46]
+2019-01-22 22:43:35,697 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:46]
+2019-01-22 22:45:37,552 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:46]
+2019-01-24 22:41:08,941 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:46]
+2019-01-24 22:41:54,443 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:48]
+2019-01-24 23:40:22,806 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:48]
+2019-01-24 23:40:47,597 ERROR: Exception on /reset_password_request [POST] [in /home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jwt/api_jws.py", line 112, in encode
+    alg_obj = self._algorithms[algorithm]
+KeyError: 'H256'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/larsle/git/microblog/app/routes.py", line 165, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/larsle/git/microblog/app/email.py", line 12, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/home/larsle/git/microblog/app/models.py", line 66, in get_reset_password_token
+    app.config["SECRET_KEY"], algorithm="H256").decode("utf-8")
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jwt/api_jwt.py", line 65, in encode
+    json_payload, key, algorithm, headers, json_encoder
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jwt/api_jws.py", line 123, in encode
+    raise NotImplementedError('Algorithm not supported')
+NotImplementedError: Algorithm not supported
+2019-01-24 23:41:50,442 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:48]

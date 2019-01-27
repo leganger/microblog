@@ -1,4 +1,4 @@
-2019-01-22 22:08:19,212 ERROR: Exception on / [GET] [in /home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py:1761]
+2019-01-27 14:33:07,932 ERROR: Exception on / [GET] [in /home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/larsle/git/microblog/app/routes.py", line 22, in index
-    return render_template("index.html", title="Home", form=form, posts=posts)
+  File "/home/larsle/git/microblog/app/routes.py", line 32, in index
+    prev_url=prev_url)
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
     return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
@@ -32,8 +32,8 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/larsle/git/microblog/app/templates/index.html", line 10, in template
-    {{ form.post.(cols=32, rows=4) }}<br>
+  File "/home/larsle/git/microblog/app/templates/index.html", line 20, in template
+    <span aria-hidden="true">&larr;</span>{{ _(Newer posts) }}
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/environment.py", line 497, in _parse
     return Parser(self, source, name, encode_filename(filename)).parse()
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 901, in parse
@@ -44,14 +44,6 @@ Traceback (most recent call last):
     return getattr(self, 'parse_' + self.stream.current.value)()
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 268, in parse_block
     node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 212, in parse_if
-    node.body = self.parse_statements(('name:elif', 'name:else',
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 165, in parse_statements
     result = self.subparse(end_tokens)
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 875, in subparse
@@ -80,11 +72,11 @@ Traceback (most recent call last):
     left = self.parse_unary()
   File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 547, in parse_unary
     node = self.parse_postfix(node)
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 672, in parse_postfix
-    node = self.parse_subscript(node)
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 705, in parse_subscript
-    self.fail('expected name or number', attr_token.lineno)
-  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: expected name or number
-2019-01-22 22:09:11,860 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:46]
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/parser.py", line 767, in parse_call
+    self.stream.expect('comma')
+  File "/home/larsle/anaconda3/envs/microblog/lib/python3.7/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'posts'
+2019-01-27 14:34:08,570 INFO: Microblog startup [in /home/larsle/git/microblog/app/__init__.py:55]
